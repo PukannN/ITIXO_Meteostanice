@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Newtonsoft.Json;
 
 namespace Meteostanice.Services
 {
@@ -15,12 +16,12 @@ namespace Meteostanice.Services
             try
             {
                 var xmlDoc = XDocument.Parse(xmlString);
-                string jsonText = Newtonsoft.Json.JsonConvert.SerializeXNode(xmlDoc, Newtonsoft.Json.Formatting.Indented);
-                return jsonText;
+                return JsonConvert.SerializeXNode(xmlDoc, Formatting.Indented);
+                
             }
             catch (Exception ex)
             {
-                throw new Exception($"Chyba při konverze XML na JSON: {ex.Message}", ex);
+                throw new Exception($"Chyba při konverzi XML na JSON: {ex.Message}", ex);
             }
         }
     }

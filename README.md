@@ -10,13 +10,11 @@ Hlavní features
 - Automatické vytvoření databáze při prvním spuštění
 
 <br>
-<br>
 
 Požadavky
 - .NET 10 SDK
 - SQL Server (connection string v appsettings.json)
 
-<br>
 <br>
 
 Konfigurace
@@ -34,7 +32,6 @@ Příklad:
 ```
 
 <br>
-<br>
 
 Spuštění
 - Lokálně v Visual Studio: otevřít solution `Meteostanice.slnx` a spustit projekt
@@ -43,7 +40,6 @@ Spuštění
   2. dotnet run --project ITIXOMeteostanice
 
 <br>
-<br>
 
 Poznámky k databázi
 - DbContext se registruje a volá pomocí `Database.EnsureCreated()` - není potřeba ručně spouštět migrace
@@ -51,12 +47,10 @@ Poznámky k databázi
 ![screenshot](ZaznamDB.png)
 
 <br>
-<br>
 
 Chování při nedostupnosti meteostanice
 - Pokud je endpoint nedostupný nebo vrací chybu, aplikace uloží zápis indikující, že data nebyla dostupná
 
-<br>
 <br>
 
 Struktura projektu
@@ -65,7 +59,6 @@ Struktura projektu
 - `Meteostanice.Models` - Model databáze
 - `Meteostanice.Services` - logika stahování a transformace
 
-<br>
 <br>
 
 Strávený čas na projektu:

@@ -20,7 +20,7 @@ if (string.IsNullOrEmpty(connectionString))
 builder.Services.AddDbContext<MeteoDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-// Registrace nastavení
+// Registrace nastavení z appsettings.json
 builder.Services.Configure<MeteoOptions>(builder.Configuration.GetSection("MeteoSettings"));
 
 // Registrace HttpClientu

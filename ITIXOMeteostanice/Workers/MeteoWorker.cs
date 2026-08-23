@@ -32,7 +32,7 @@ public class MeteoWorker : BackgroundService
     {
         _logger.LogInformation("MeteoWorker spuštěn. Nastavený interval: {Interval} hod.", _options.DownloadInterval);
 
-        var interval = TimeSpan.FromMinutes(_options.DownloadInterval);
+        var interval = TimeSpan.FromHours(_options.DownloadInterval);
         using var timer = new PeriodicTimer(interval);
 
         do

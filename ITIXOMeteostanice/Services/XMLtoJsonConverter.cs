@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 using System.Xml.Linq;
-using Newtonsoft.Json;
 
 namespace Meteostanice.Services
 {
@@ -17,7 +12,7 @@ namespace Meteostanice.Services
             {
                 var xmlDoc = XDocument.Parse(xmlString);
                 return JsonConvert.SerializeXNode(xmlDoc, Formatting.Indented);
-                
+
             }
             catch (Exception ex)
             {

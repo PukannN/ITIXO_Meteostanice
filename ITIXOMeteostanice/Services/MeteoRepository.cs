@@ -1,12 +1,5 @@
 ﻿using Meteostanice.Data;
 using Meteostanice.Models;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Meteostanice.Services
 {
@@ -16,7 +9,7 @@ namespace Meteostanice.Services
         public MeteoRepository(MeteoDbContext context)
         {
             _context = context;
-            
+
         }
 
         public async Task SaveMeteoRecordAsync(MeteoRecord record)

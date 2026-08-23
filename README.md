@@ -17,7 +17,7 @@ Požadavky
 
 <br>
 
-Konfigurace
+Konfigurace \
 V souboru `appsettings.json` nastavte connection string `DefaultConnection` a URL `DownloadUrl`
 Příklad:
 ```

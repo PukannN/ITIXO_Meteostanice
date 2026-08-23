@@ -38,7 +38,7 @@ Příklad:
 - Lokálně v Visual Studio: otevřít solution `Meteostanice.slnx` a spustit projekt
 - Nebo pomocí CLI:
   1. Otevřít terminal v root projektu (`C:\ITIXOMeteostanice`)
-  2. dotnet run --project ITIXOMeteostanice
+  2. `dotnet run --project ITIXOMeteostanice`
 
 <br>
 

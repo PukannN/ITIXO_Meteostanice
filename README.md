@@ -11,13 +11,14 @@ Hlavní features
 
 <br>
 
-Požadavky
+**Požadavky**
 - .NET 10 SDK
 - SQL Server (connection string v appsettings.json)
 
 <br>
 
-Konfigurace \
+**Konfigurace** \
+<br>
 V souboru `appsettings.json` nastavte connection string `DefaultConnection` a URL `DownloadUrl`
 Příklad:
 ```
@@ -33,7 +34,7 @@ Příklad:
 
 <br>
 
-Spuštění
+**Spuštění**
 - Lokálně v Visual Studio: otevřít solution `Meteostanice.slnx` a spustit projekt
 - Nebo pomocí CLI:
   1. Otevřít terminal v root projektu (`C:\ITIXOMeteostanice`)
@@ -41,19 +42,19 @@ Spuštění
 
 <br>
 
-Poznámky k databázi
+**Poznámky k databázi**
 - DbContext se registruje a volá pomocí `Database.EnsureCreated()` - není potřeba ručně spouštět migrace
 - Tabulka ukládá JSON payload, čas stažení, flag dostupnosti a případnou error message
 ![screenshot](ZaznamDB.png)
 
 <br>
 
-Chování při nedostupnosti meteostanice
+**Chování při nedostupnosti meteostanice**
 - Pokud je endpoint nedostupný nebo vrací chybu, aplikace uloží zápis indikující, že data nebyla dostupná
 
 <br>
 
-Struktura projektu
+**Struktura projektu**
 - `Meteostanice.Workers` - BackgroundService
 - `Meteostanice.Data` - EF Core DbContext
 - `Meteostanice.Models` - Model databáze

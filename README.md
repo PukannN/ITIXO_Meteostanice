@@ -9,9 +9,11 @@ Hlavní features
 - Ukládání dat do SQL Serveru pomocí Entity Framework Core
 - Automatické vytvoření databáze při prvním spuštění
 
+
 Požadavky
 - .NET 10 SDK
 - SQL Server (connection string v appsettings.json)
+
 
 Konfigurace
 V souboru `appsettings.json` nastavte connection string `DefaultConnection` a URL `DownloadUrl`
@@ -27,19 +29,23 @@ Příklad:
 }
 ```
 
+
 Spuštění
 - Lokálně v Visual Studio: otevřít solution `Meteostanice.slnx` a spustit projekt
 - Nebo pomocí CLI:
   1. Otevřít terminal v root projektu (`C:\ITIXOMeteostanice`)
   2. dotnet run --project ITIXOMeteostanice
 
+
 Poznámky k databázi
 - DbContext se registruje a volá pomocí `Database.EnsureCreated()` - není potřeba ručně spouštět migrace
 - Tabulka ukládá JSON payload, čas stažení, flag dostupnosti a případnou error message
 ![screenshot](ZaznamDB.png)
 
+
 Chování při nedostupnosti meteostanice
 - Pokud je endpoint nedostupný nebo vrací chybu, aplikace uloží zápis indikující, že data nebyla dostupná
+
 
 Struktura projektu
 - `Meteostanice.Workers` - BackgroundService

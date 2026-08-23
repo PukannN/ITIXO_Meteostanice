@@ -14,8 +14,9 @@ Požadavky
 - SQL Server (connection string v appsettings.json)
 
 Konfigurace
-V souboru `appsettings.json` nastavte connection string `DefaultConnection` a URL `DownloadUrl`. 
+V souboru `appsettings.json` nastavte connection string `DefaultConnection` a URL `DownloadUrl`
 Příklad:
+`
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=.;Database=MeteoDb;Trusted_Connection=True;"
@@ -24,6 +25,7 @@ Příklad:
     "Url": "https://pastebin.com/raw/PMQueqDV"
   }
 }
+`
 
 Spuštění
 - Lokálně v Visual Studio: otevřít solution `Meteostanice.slnx` a spustit projekt

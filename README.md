@@ -50,7 +50,7 @@ Příklad:
 <br>
 
 **Chování při nedostupnosti meteostanice**
-- Pokud je endpoint nedostupný nebo vrací chybu, aplikace uloží zápis indikující, že data nebyla dostupná
+- Pokud je endpoint nedostupný nebo vrací chybu, aplikace uloží zápis `IsSuccessful 0` a error message zapíše do `ErrorMessage`
 
 <br>
 

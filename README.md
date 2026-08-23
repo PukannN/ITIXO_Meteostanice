@@ -13,7 +13,7 @@ Projekt stahuje XML data meteostanice z konfigurovatelné URL, převádí je na 
 
 **Požadavky**
 - .NET 10 SDK
-- SQL Server (connection string v appsettings.json)
+- SQL Server (connection string do appsettings.json)
 
 <br>
 

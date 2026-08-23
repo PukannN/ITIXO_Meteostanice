@@ -19,7 +19,7 @@ Hlavní features
 
 **Konfigurace** \
 <br>
-V souboru `appsettings.json` nastavte connection string `DefaultConnection` a URL `DownloadUrl`
+V souboru `appsettings.json` nastavte connection string `DefaultConnection` a URL `DownloadUrl`\
 Příklad:
 ```
 {

@@ -14,14 +14,8 @@ namespace Meteostanice.Data
     {
         public DbSet<MeteoRecord> MeteoRecords { get; set; }
 
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-
+        public MeteoDbContext(DbContextOptions<MeteoDbContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer(
-                "Server=(localdb)\\MSSQLLocalDB;Database=MeteoDb;Trusted_Connection=True;TrustServerCertificate=True;");
-
-            
         }
     }
 }

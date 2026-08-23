@@ -1,5 +1,6 @@
 ﻿using Meteostanice.Data;
 using Meteostanice.Models;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,10 +13,10 @@ namespace Meteostanice.Services
     public class MeteoRepository
     {
         private MeteoDbContext _context;
-
         public MeteoRepository(MeteoDbContext context)
         {
             _context = context;
+            
         }
 
         public async Task SaveMeteoRecordAsync(MeteoRecord record)
@@ -27,8 +28,7 @@ namespace Meteostanice.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error saving MeteoRecord: {ex.Message}");
-                throw;
+                throw new Exception($"Chyba při ukládání záznamu do databáze: {ex.Message}", ex);
             }
         }
     }

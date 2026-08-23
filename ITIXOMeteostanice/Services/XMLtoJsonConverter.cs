@@ -20,7 +20,7 @@ namespace Meteostanice.Services
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error converting XML to JSON: {ex.Message}", ex);
+                throw new Exception($"Chyba při konverze XML na JSON: {ex.Message}", ex);
             }
         }
     }

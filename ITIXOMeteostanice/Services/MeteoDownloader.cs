@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -12,23 +13,25 @@ namespace Meteostanice.Services
     {
 
         private readonly HttpClient _httpClient;
-        public MeteoDownloader(HttpClient httpClient)
+        private readonly ILogger<MeteoDownloader> _logger;
+        public MeteoDownloader(HttpClient httpClient, ILogger<MeteoDownloader> logger)
         {
             _httpClient = httpClient;
+            _logger = logger;
         }
 
         public async Task<string> DownloadXmlAsync(string url)
         {
             try
             { 
-                //TODO: SQL LOG
+
             return await _httpClient.GetStringAsync(url);
-            }
+            }   
   
             catch (Exception ex)
             {
-                //TODO: SQL LOG
-                Console.WriteLine($"Error downloading XML from {url}: {ex.Message}");
+
+                _logger.LogError(ex, $"Nastala chyba při stahování XML souboru z adresy {url}: {ex.Message}");
                 throw;
             }
         }

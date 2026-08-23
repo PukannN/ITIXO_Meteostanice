@@ -43,7 +43,7 @@ Příklad:
 <br>
 
 **Poznámky k databázi**
-- DbContext se registruje a volá pomocí `Database.EnsureCreated()` - není potřeba ručně spouštět migrace
+- DbContext se registruje a volá pomocí `Database.EnsureCreated()`, není potřeba ručně spouštět migrace
 - Tabulka ukládá JSON payload, čas stažení, flag dostupnosti a případnou error message
 ![screenshot](ZaznamDB.png)
 

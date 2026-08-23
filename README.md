@@ -34,7 +34,7 @@ Spuštění
 Poznámky k databázi
 - DbContext se registruje a volá pomocí `Database.EnsureCreated()` - není potřeba ručně spouštět migrace
 - Tabulka ukládá JSON payload, čas stažení, flag dostupnosti a případnou error message
-- ![screenshot](UI_Showcase.png)
+- ![screenshot](ZaznamDB.png)
 
 Chování při nedostupnosti meteostanice
 - Pokud je endpoint nedostupný nebo vrací chybu, aplikace uloží zápis indikující, že data nebyla dostupná

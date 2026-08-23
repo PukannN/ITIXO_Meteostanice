@@ -5,7 +5,7 @@ Projekt stahuje XML data meteostanice z konfigurovatelné URL, převádí je na 
 **Hlavní features**
 - .NET Worker Service (hostovaný servis) — spuštěno jako background worker
 - Konfigurovatelná URL (appsettings.json)
-- Poskytnutou URL jsem si upravil na https://pastebin.com**/raw/**PMQueqDV, abych mohl stahovat rovnou čistý XML string
+- Poskytnutou URL jsem si upravil na https://pastebin.com/raw/PMQueqDV, abych mohl stahovat rovnou čistý XML string
 - Ukládání dat do SQL Serveru pomocí Entity Framework Core
 - Automatické vytvoření databáze při prvním spuštění
 

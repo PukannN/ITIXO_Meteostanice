@@ -58,7 +58,7 @@ Příklad:
 - `Meteostanice.Workers` - BackgroundService
 - `Meteostanice.Data` - EF Core DbContext
 - `Meteostanice.Models` - Model databáze
-- `Meteostanice.Services` - logika stahování a transformace
+- `Meteostanice.Services` - Logika stahování a transformace
 
 <br>
 

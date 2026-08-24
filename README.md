@@ -1,9 +1,9 @@
 # ITIXO Meteostanice - ITIXO zkušební práce
 
-Projekt stahuje XML data meteostanice z konfigurovatelné URL, převádí je na JSON a ukládá do SQL databáze spolu s časem stažení. Pokud meteostanice není dostupná, uloží se prázdný záznam s informací o nedostupnosti.
+Aplikace stahuje XML data meteostanice z konfigurovatelné URL, převádí je na JSON a ukládá do SQL databáze spolu s časem stažení. Pokud meteostanice není dostupná, uloží se prázdný záznam s informací o nedostupnosti.
 
 **Hlavní features**
-- .NET Worker Service (hostovaný servis) — spuštěno jako background worker
+- .NET Worker Service - spuštěno jako background worker
 - Konfigurovatelná URL (appsettings.json)
 - Poskytnutou URL jsem si upravil na https://pastebin.com/raw/PMQueqDV, abych mohl stahovat rovnou čistý XML string
 - Ukládání dat do SQL Serveru pomocí Entity Framework Core
@@ -19,7 +19,7 @@ Projekt stahuje XML data meteostanice z konfigurovatelné URL, převádí je na 
 
 **Konfigurace** \
 <br>
-V souboru `appsettings.json` nastavte connection string `DefaultConnection` a URL `DownloadUrl`\
+V souboru `appsettings.json` nastavte svůj connection string `DefaultConnection` a URL `DownloadUrl`\
 Příklad:
 ```
 {

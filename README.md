@@ -3,7 +3,7 @@
 Aplikace stahuje XML data meteostanice z konfigurovatelné URL, převádí je na JSON a ukládá do SQL databáze spolu s časem stažení. Pokud meteostanice není dostupná, uloží se prázdný záznam s informací o nedostupnosti.
 
 **Hlavní features**
-- .NET Worker Service - spuštěno jako background worker
+- .NET Worker Service - spoustěno jako background service
 - Konfigurovatelná URL (appsettings.json)
 - Poskytnutou URL jsem si upravil na https://pastebin.com/raw/PMQueqDV, abych mohl stahovat rovnou čistý XML string
 - Ukládání dat do SQL Serveru pomocí Entity Framework Core

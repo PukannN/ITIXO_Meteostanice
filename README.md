@@ -13,13 +13,14 @@ Aplikace stahuje XML data meteostanice z konfigurovatelné URL, převádí je na
 
 **Požadavky**
 - .NET 10 SDK
-- SQL Server (connection string do appsettings.json)
+- SQL Server (connection string do `appsettings.json`)
 
 <br>
 
 **Konfigurace** \
 <br>
-V souboru `appsettings.json` nastavte svůj connection string `DefaultConnection` a URL `DownloadUrl`\
+V souboru `appsettings.json` nastavte svůj connection string k SQL serveru `DefaultConnection` a URL `DownloadUrl`\
+ - 
 Příklad:
 ```
 {

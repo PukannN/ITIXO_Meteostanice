@@ -20,7 +20,6 @@ Aplikace stahuje XML data meteostanice z konfigurovatelné URL, převádí je na
 **Konfigurace** \
 <br>
 V souboru `appsettings.json` nastavte svůj connection string k SQL serveru `DefaultConnection` a URL `DownloadUrl`\
- - 
 Příklad:
 ```
 {

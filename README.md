@@ -19,15 +19,16 @@ Aplikace stahuje XML data meteostanice z konfigurovatelné URL, převádí je na
 
 **Konfigurace** \
 <br>
-V souboru `appsettings.json` nastavte svůj connection string k SQL serveru `DefaultConnection` a URL `DownloadUrl`\
+V souboru `appsettings.json` nastavte svůj connection string k SQL serveru `DefaultConnection`, URL odkazující na čisté XML `DownloadUrl` a interval stahování `DownloadInterval` (v minutách)\
 Příklad:
 ```
-{
+﻿{
   "ConnectionStrings": {
-    "DefaultConnection": "Server=.;Database=MeteoDb;Trusted_Connection=True;"
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=MeteoDb;Trusted_Connection=True;TrustServerCertificate=True;"
   },
   "MeteoSettings": {
-    "Url": "https://pastebin.com/raw/PMQueqDV"
+    "DownloadURL": "https://pastebin.com/raw/PMQueqDV",
+    "DownloadInterval": 60
   }
 }
 ```
